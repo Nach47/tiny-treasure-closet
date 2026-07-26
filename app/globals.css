@@ -1,0 +1,76 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-cream text-ink font-body antialiased;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-display text-ink;
+  }
+  :focus-visible {
+    outline: 2px solid #5f7355;
+    outline-offset: 3px;
+  }
+}
+
+@layer components {
+  /* Signature motif: a scalloped edge, like the pinked trim on a baby blanket.
+     Used under the hero and between key sections instead of a plain divider. */
+  .scallop-edge {
+    height: 28px;
+    width: 100%;
+    background-repeat: repeat-x;
+    background-size: 40px 28px;
+    background-position: center;
+  }
+  .scallop-edge--cream {
+    background-image: radial-gradient(circle at 20px 0, transparent 19px, #fbf8f2 20px);
+  }
+  .scallop-edge--sage {
+    background-image: radial-gradient(circle at 20px 0, transparent 19px, #5f7355 20px);
+  }
+  .scallop-edge--beige {
+    background-image: radial-gradient(circle at 20px 0, transparent 19px, #ede3d3 20px);
+  }
+
+  .eyebrow {
+    @apply font-body text-xs tracking-[0.2em] uppercase text-sage-dark font-semibold;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-sage-dark px-7 py-3.5 text-sm font-semibold text-cream shadow-card transition-all hover:bg-ink hover:shadow-soft active:scale-[0.98];
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full border border-ink/15 bg-transparent px-7 py-3.5 text-sm font-semibold text-ink transition-all hover:border-sage-dark hover:text-sage-dark;
+  }
+
+  .btn-gold {
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-gold px-7 py-3.5 text-sm font-semibold text-ink shadow-card transition-all hover:bg-gold-light active:scale-[0.98];
+  }
+
+  .card-surface {
+    @apply rounded-4xl bg-white/70 shadow-card backdrop-blur-sm;
+  }
+
+  .input {
+    @apply w-full rounded-2xl border border-ink/15 bg-white px-4 py-2.5 text-sm text-ink placeholder:text-ink-soft/60 focus:border-sage-dark focus:outline-none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
