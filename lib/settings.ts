@@ -52,6 +52,7 @@ export const CATEGORIES: StoreCategory[] = [
   { name: "Baby Boys", slug: "baby-boys", blurb: "Shirts & shorts" },
   { name: "Toddlers", slug: "toddlers", blurb: "1–4 years" },
   { name: "Matching Sets", slug: "matching-sets", blurb: "Sibling-ready" },
+  { name: "Surprise Bundles", slug: "surprise-bundles", blurb: "5 & 10-piece mystery mixes" },
   { name: "Dresses", slug: "dresses", blurb: "Occasion & everyday" },
   { name: "Shoes", slug: "shoes", blurb: "First steps" },
   { name: "Accessories", slug: "accessories", blurb: "Bows, hats & more" },

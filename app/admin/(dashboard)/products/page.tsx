@@ -1,6 +1,7 @@
 import { adminGetAllProducts } from "@/lib/admin/products";
 import ProductsTable from "@/components/admin/ProductsTable";
 import ImportCatalogButton from "@/components/admin/ImportCatalogButton";
+import ImportBundlesButton from "@/components/admin/ImportBundlesButton";
 
 export const dynamic = "force-dynamic";
 
@@ -13,8 +14,9 @@ export default async function AdminProductsPage() {
       <h1 className="mt-1 text-2xl">Products</h1>
       <p className="mt-1 text-sm text-ink-soft">{products.length} total</p>
 
-      <div className="mt-4">
+      <div className="mt-4 flex flex-wrap gap-3">
         <ImportCatalogButton />
+        <ImportBundlesButton />
       </div>
 
       <div className="mt-6">
