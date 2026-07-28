@@ -1,4 +1,5 @@
 import Link from "next/link";
+import ProductImage from "./ProductImage";
 
 export default function Hero() {
   return (
@@ -25,20 +26,18 @@ export default function Hero() {
           </div>
         </div>
 
-        <div className="relative">
-          <div className="aspect-[4/5] w-full overflow-hidden rounded-5xl bg-gradient-to-br from-beige to-beige-dark shadow-soft">
-            <div className="flex h-full w-full items-center justify-center">
-              <svg width="30%" height="30%" viewBox="0 0 24 24" fill="none" className="opacity-60">
-                <path
-                  d="M12 2c1.1 0 2 .9 2 2 0 .74-.4 1.38-1 1.72V7h2a5 5 0 0 1 5 5v1h1a1 1 0 0 1 0 2h-1v2a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5v-2H3a1 1 0 1 1 0-2h1v-1a5 5 0 0 1 5-5h2V5.72C10.4 5.38 10 4.74 10 4c0-1.1.9-2 2-2Z"
-                  fill="#5F7355"
-                />
-              </svg>
-            </div>
+        <div className="relative mx-auto w-full max-w-sm lg:mx-0 lg:max-w-none">
+          <div className="aspect-[4/5] w-full overflow-hidden rounded-5xl shadow-soft">
+            <ProductImage url="/seed-products/ttc-030.jpg" alt="Unicorn Star two-piece set" seed="hero-main" />
           </div>
-          <div className="absolute -bottom-6 -left-6 hidden rounded-4xl bg-cream px-6 py-4 shadow-card sm:block">
-            <p className="font-display text-2xl text-sage-dark">4.9★</p>
-            <p className="text-xs text-ink-soft">from 800+ happy parents</p>
+
+          <div className="absolute -right-4 -top-6 hidden aspect-square w-32 overflow-hidden rounded-4xl border-4 border-cream shadow-card sm:block sm:w-40 lg:-right-8">
+            <ProductImage url="/seed-products/ttc-017.jpg" alt="Truck two-piece set" seed="hero-secondary" />
+          </div>
+
+          <div className="absolute -bottom-6 -left-4 rounded-4xl bg-cream px-5 py-3.5 shadow-card sm:-left-6 sm:px-6 sm:py-4">
+            <p className="font-display text-xl text-sage-dark sm:text-2xl">4.9★</p>
+            <p className="text-xs text-ink-soft">from happy parents</p>
           </div>
         </div>
       </div>
